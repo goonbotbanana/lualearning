@@ -10,8 +10,8 @@ newPart.Position = Vector3.new(1, 20, 0)
 while true do 
 	wait(0.1)
 	local Rain = Instance.new("Part", game.Workspace)
-	local Rain_x = math.random(0, 50)
-	local Rain_z = math.random(0, 50)
+	local Rain_x = math.random(-200, 200)
+	local Rain_z = math.random(-200, 200)
 	Rain.Position = Vector3.new(Rain_x, 40, Rain_z)
 	Rain.Size = Vector3.new(0.15, 1.25, 0.15)
 	Rain.Anchored = false
