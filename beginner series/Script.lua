@@ -101,6 +101,27 @@ Part.Touched:Connect(function(hit) --"Connect" connects the function to the even
 	print(hit) --the hit parameter is what is touched
 	
 	if hit.Parent:FindFirstChild("Humanoid") then --check if it is a player
+		Part.Color = Color3.fromRGB(255,0,0)
 		hit.Parent.Humanoid.Health = 0
 	end
 end)
+
+--instances--
+
+local newPart = Instance.new("Part", game.Workspace)
+
+newPart.Anchored = true
+newPart.Size = Vector3.new(3,10,1)
+newPart.Position = Vector3.new(1, 20, 0)
+
+while true do 
+	wait(0.2)
+	local Rain = Instance.new("Part", game.Workspace)
+	Rain.Position = Vector3.new(0, 15, 0)
+	Rain.Size = Vector3.new(0.25, 1.5, 0.25)
+	Rain.Anchored = false
+	Rain.Transparency = 0.5
+	Rain.Color = Color3.fromRGB(73, 146, 255)
+end
+
+
