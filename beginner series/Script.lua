@@ -56,19 +56,39 @@
 --EVENTS--
 -- things that roblox listens for... :0
 
-local Baseplate = game.Workspace.Baseplate
-local myPart = game.Workspace.Part
+--local Baseplate = game.Workspace.Baseplate
+--local myPart = game.Workspace.Part
 
-local function isTouched() 
-	print("I AM BEING TOUCHED")
-	myPart.Anchored = false
-end
+--local function isTouched() 
+--	print("I AM BEING TOUCHED")
+--	myPart.Anchored = false
+--end
 
-myPart.Touched:Connect(isTouched)
+--myPart.Touched:Connect(isTouched)
 
+--Built-In Functions--
 
+--local MelonFriend = "NotMyHotdog"
 
+--local Melon = game.Workspace:FindFirstChild(MelonFriend)
 
+--While and Repeat Loops--
 
+local hotdogs = 1
+
+--may not run at least once because the conditional is at the beginning
+--while hotdogs < 5 do
+--	wait(2) --wait 2 seconds before printing
+--	print("You have less than 5 hot dogs...")
+--	hotdogs += 1 -- or hotdogs = hotdogs + 1
+--	print(hotdogs)
+--end
+
+--always runs at least once because the conditional is at the end
+repeat
+	wait(2)
+	print("erm... where are the dawgs")
+	hotdogs += 1
+until hotdogs == 5
 
 
