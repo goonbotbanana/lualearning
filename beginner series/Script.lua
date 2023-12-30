@@ -74,9 +74,9 @@
 
 --While and Repeat Loops--
 
-local hotdogs = 1
+--local hotdogs = 1
 
---may not run at least once because the conditional is at the beginning
+----may not run at least once because the conditional is at the beginning
 --while hotdogs < 5 do
 --	wait(2) --wait 2 seconds before printing
 --	print("You have less than 5 hot dogs...")
@@ -84,11 +84,23 @@ local hotdogs = 1
 --	print(hotdogs)
 --end
 
---always runs at least once because the conditional is at the end
-repeat
-	wait(2)
-	print("erm... where are the dawgs")
-	hotdogs += 1
-until hotdogs == 5
+----always runs at least once because the conditional is at the end
+--repeat
+--	wait(2)
+--	print("erm... where are the dawgs")
+--	hotdogs += 1
+--until hotdogs == 5
 
+--more events--
 
+local Part = script.Parent
+
+Part.Touched:Connect(function(hit) --"Connect" connects the function to the event "Touched"
+	--when the part hits something else, this will fire and print whatever it touches.
+	--ex: stepping on it will print the body part that stepped on it
+	print(hit) --the hit parameter is what is touched
+	
+	if hit.Parent:FindFirstChild("Humanoid") then --check if it is a player
+		hit.Parent.Humanoid.Health = 0
+	end
+end)
