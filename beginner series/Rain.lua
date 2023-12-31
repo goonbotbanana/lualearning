@@ -10,15 +10,19 @@
 local rainSpawned = 0
 
 while true do 
-	if rainSpawned >= 50 then
-		print("50 or more rain parts have been spawned!")
+	if rainSpawned >= 200 then
+		print("200 rain parts have been spawned!")
 		break
 	end
 	rainSpawned += 1
-	wait(0.1)
+	
+	wait()
+	
 	local Rain = Instance.new("Part", game.Workspace)
 	local Rain_x = math.random(-200, 200)
 	local Rain_z = math.random(-200, 200)
+	
+	--properties
 	Rain.Position = Vector3.new(Rain_x, 40, Rain_z)
 	Rain.Size = Vector3.new(0.15, 1.25, 0.15)
 	Rain.Anchored = false
